@@ -1,4 +1,5 @@
 PopupBindings
+=============
 
 "PopupBindings" is a Cocoa sample application that demonstrates how to use the bindings to manage the contents and selection of the NSPopupButton class.  It uses the NSArrayController class to hold the data and track the selection.
 
@@ -29,15 +30,14 @@ All four NSTextFields describing the person's address is bound to the array cont
 	Model Key Path: addressStreet
 
 
+===========================================================================
 Sample Requirements
-The supplied Xcode project builds with Mac OS X 10.6 and runs on 10.5.x or later.
+The supplied Xcode project was created using Xcode v4.3 or later running under Mac OS X 10.6.x or later.
 
 
-Changes from Previous Versions
-n/a
-
-
+===========================================================================
 Packaging List
+
 AppDelegate.m
 AppDelegate.h
 	NSApp's main delegate, manages MyWindowController and helps open the sample's ReadMe from the Help menu.
@@ -47,12 +47,11 @@ MyWindowController.m
 	The NSWindowController object for the sample's main window.
 
 
-Feedback and Bug Reports
-Please send all feedback about this sample by connecting to the Contact ADC page.
-Please submit any bug reports about this sample to the Bug Reporting page.
+===========================================================================
+Changes from Previous Versions
+
+1.1 - Upgraded to Xcode 4.3 and Mac OS X 10.7.
+1.0 - First version
 
 
-Developer Technical Support
-The Apple Developer Connection Developer Technical Support (DTS) team is made up of highly qualified engineers with development expertise in key Apple technologies. Whether you need direct one-on-one support troubleshooting issues, hands-on assistance to accelerate a project, or helpful guidance to the right documentation and sample code, Apple engineers are ready to help you.  Refer to the Apple Developer Technical Support page.
-
-Copyright © 2009 Apple Inc. All rights reserved.
+Copyright (C) 2010-2012 Apple Inc. All rights reserved.

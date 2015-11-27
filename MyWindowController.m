@@ -2,7 +2,7 @@
      File: MyWindowController.m 
  Abstract: The sample's main NSWindowController.
   
-  Version: 1.0 
+  Version: 1.1 
   
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple 
  Inc. ("Apple") in consideration of your agreement to the following 
@@ -42,7 +42,7 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE 
  POSSIBILITY OF SUCH DAMAGE. 
   
- Copyright (C) 2010 Apple Inc. All Rights Reserved. 
+ Copyright (C) 2012 Apple Inc. All Rights Reserved. 
   
  */
 
@@ -50,6 +50,8 @@
 #import "Person.h"
 
 @implementation MyWindowController
+
+@synthesize arrayController;
 
 // -------------------------------------------------------------------------------
 //	awakeFromNib:
@@ -66,9 +68,9 @@
                                                     @"451 University Avenue", @"Palo Alto", @"CA",
                                                     @"94301",
                                                     nil];
-    NSMutableDictionary* properties = [NSMutableDictionary dictionaryWithObjects:values forKeys:keys];
+    NSDictionary* properties = [NSMutableDictionary dictionaryWithObjects:values forKeys:keys];
 	Person *personToAdd = [[Person alloc] init];
-	[personToAdd setAttributes:properties];
+	personToAdd.attributes = properties;
 	[arrayController addObject: personToAdd];
 	[personToAdd release];
 
@@ -76,9 +78,9 @@
                                         [NSNumber numberWithInt:31],
                                         @"767 Fifth Ave.", @"New York", @"NY", @"10153",
                                         nil];
-	properties = [NSMutableDictionary dictionaryWithObjects:values forKeys:keys];
+	properties = [NSDictionary dictionaryWithObjects:values forKeys:keys];
 	personToAdd = [[Person alloc] init];
-	[personToAdd setAttributes:properties];
+	personToAdd.attributes = properties;
 	[arrayController addObject: personToAdd];
 	[personToAdd release];
 	
@@ -86,9 +88,9 @@
                                         [NSNumber numberWithInt:41],
                                         @"679 North Michigan Ave.", @"Chicago", @"IL", @"60611",
                                         nil];
-	properties = [NSMutableDictionary dictionaryWithObjects:values forKeys:keys];
+	properties = [NSDictionary dictionaryWithObjects:values forKeys:keys];
 	personToAdd = [[Person alloc] init];
-	[personToAdd setAttributes:properties];
+	personToAdd.attributes = properties;
 	[arrayController addObject: personToAdd];
 	[personToAdd release];
 	
@@ -96,9 +98,9 @@
                                         [NSNumber numberWithInt:92],
                                         @"5085 Westheimer Rd.", @"Houston", @"TX", @"77056",
                                         nil];
-	properties = [NSMutableDictionary dictionaryWithObjects:values forKeys:keys];
+	properties = [NSDictionary dictionaryWithObjects:values forKeys:keys];
 	personToAdd = [[Person alloc] init];
-	[personToAdd setAttributes:properties];
+	personToAdd.attributes = properties;
 	[arrayController addObject: personToAdd];
 	[personToAdd release];
 					  	

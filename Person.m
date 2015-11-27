@@ -2,7 +2,7 @@
      File: Person.m 
  Abstract: Data model of the "Person" object.
   
-  Version: 1.0 
+  Version: 1.1 
   
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple 
  Inc. ("Apple") in consideration of your agreement to the following 
@@ -42,13 +42,15 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE 
  POSSIBILITY OF SUCH DAMAGE. 
   
- Copyright (C) 2010 Apple Inc. All Rights Reserved. 
+ Copyright (C) 2012 Apple Inc. All Rights Reserved. 
   
  */
 
 #import "Person.h"
 
 @implementation Person
+
+@synthesize attributes;
 
 - (void)dealloc
 {
@@ -84,17 +86,6 @@
 - (NSString *)addressZip
 {
    return [attributes objectForKey:@"addressZip"];
-}
-
-- (void)setAttributes:(NSDictionary *)newAttributes
-{
-    [attributes release];
-	attributes = [newAttributes copy];
-}
-
-- (NSMutableDictionary *)attributes
-{
-    return [[attributes retain] autorelease];
 }
 
 @end
